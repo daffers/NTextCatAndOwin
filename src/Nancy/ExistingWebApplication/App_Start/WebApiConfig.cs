@@ -20,6 +20,8 @@ namespace ExistingWebApplication
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            config.Routes.IgnoreRoute("nancy", "Languages/");
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
